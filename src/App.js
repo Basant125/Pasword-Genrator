@@ -36,9 +36,13 @@ function App() {
   }
 
   const handleCopy = () => {
-    copy(password);
-    setTooltip(true)
-    tooltipCount()
+    if (password.length > 4) {
+      copy(password);
+      setTooltip(true)
+      tooltipCount()
+    } else {
+      copy(null);
+    }
   }
 
   const tooltipCount = () => {
