@@ -8,7 +8,7 @@ import copy from "copy-to-clipboard";
 
 function App() {
   const [type, setType] = useState([]);
-  const [value, setValue] = useState(10);
+  const [value, setValue] = useState(5);
   const [password, setPassword] = useState('');
   const [tooltip, setTooltip] = useState(false);
   const [strength, setStrength] = useState(0)
@@ -102,6 +102,7 @@ function App() {
           <div className='range'>
             <Slider
               value={value || 0}
+              max={15}
               aria-label="Default"
               valueLabelDisplay="auto"
               sx={{ color: "#A5FFAF" }}
